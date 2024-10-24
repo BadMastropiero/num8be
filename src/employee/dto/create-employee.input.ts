@@ -5,4 +5,5 @@ export class CreateEmployeeInput {
   departmentId: number;
   phone?: string;
   address?: string;
+  isActive: boolean;
 }

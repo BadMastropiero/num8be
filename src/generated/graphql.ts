@@ -18,6 +18,7 @@ export interface CreateEmployeeInput {
     departmentId?: Nullable<number>;
     firstName: string;
     hireDate: string;
+    isActive?: Nullable<boolean>;
     lastName: string;
     phone?: Nullable<string>;
 }
@@ -44,6 +45,7 @@ export interface Employee {
     firstName: string;
     hireDate: string;
     id?: Nullable<number>;
+    isActive?: Nullable<boolean>;
     lastName: string;
     phone?: Nullable<string>;
 }

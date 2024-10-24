@@ -29,6 +29,7 @@ model Employee {
   departmentId Int
   phone        String?
   address      String?
+  isActive     Boolean    @default(true)
 
   @@index([departmentId])
 }
