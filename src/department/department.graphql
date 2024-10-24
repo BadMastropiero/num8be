@@ -1,0 +1,26 @@
+type Department {
+    id:          Int
+    name:        String!
+    description: String
+    employees:   [Employee]
+}
+
+input CreateDepartmentInput {
+    name:        String!
+    description: String
+}
+
+input UpdateDepartmentInput {
+    id: Int!
+}
+
+extend type Query {
+    getDepartments: [Department]!
+    getDepartment(id: Int!): Department
+}
+
+extend type Mutation {
+    createDepartment(createDepartmentInput: CreateDepartmentInput!): Department!
+    updateDepartment(updateDepartmentInput: UpdateDepartmentInput!): Department!
+    removeDepartment(id: Int!): Department
+}
