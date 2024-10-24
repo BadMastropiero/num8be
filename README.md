@@ -52,6 +52,12 @@ To sync prisma scheme with db:
 $ npm run prisma:push
 ```
 
+To seed database:
+
+```bash
+$ npm run prisma:seed
+```
+
 ## Database
 For simplicity, we are using sqlite as database, but you can change it to any other database supported by prisma.
 

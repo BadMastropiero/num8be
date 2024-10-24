@@ -19,7 +19,8 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "prisma:push": "prisma generate && prisma validate && prisma db push",
-    "prisma:migrations:gen": "prisma generate && prisma migrate dev --name"
+    "prisma:migrations:gen": "prisma generate && prisma migrate dev --name",
+    "prisma:seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
     "@apollo/server": "^4.11.0",
@@ -56,7 +57,7 @@
     "ts-jest": "^29.1.0",
     "ts-loader": "^9.4.3",
     "ts-morph": "^24.0.0",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.3"
   },
