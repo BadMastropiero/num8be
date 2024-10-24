@@ -58,3 +58,7 @@ For simplicity, we are using sqlite as database, but you can change it to any ot
 ## Api security
 
 For simplicity, we are using a simple api key for security, but you can change it to any other security method.
+
+## TODO (Improvements)
+- Add meaningful tests
+- Stop using db id as graphql id, use uuid or slugs

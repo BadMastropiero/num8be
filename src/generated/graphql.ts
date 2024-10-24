@@ -28,7 +28,14 @@ export interface UpdateDepartmentInput {
 }
 
 export interface UpdateEmployeeInput {
+    address?: Nullable<string>;
+    departmentId?: Nullable<number>;
+    firstName?: Nullable<string>;
+    hireDate?: Nullable<string>;
     id: number;
+    isActive?: Nullable<boolean>;
+    lastName?: Nullable<string>;
+    phone?: Nullable<string>;
 }
 
 export interface Department {
