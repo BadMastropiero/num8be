@@ -1,23 +1,23 @@
 type Employee {
-    id:           Int
+    id:           Int!
     firstName:    String!
     lastName:     String!
     hireDate:     String!
-    departmentId: Int
+    departmentId: Int!
     phone:        String
     address:      String
     department:   Department
-    isActive:     Boolean
+    isActive:     Boolean!
 }
 
 input CreateEmployeeInput {
     firstName:    String!
     lastName:     String!
     hireDate:     String!
-    departmentId: Int
+    departmentId: Int!
     phone:        String
     address:      String
-    isActive:     Boolean
+    isActive:     Boolean!
 }
 
 input UpdateEmployeeInput {

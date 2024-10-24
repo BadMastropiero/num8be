@@ -15,10 +15,10 @@ export interface CreateDepartmentInput {
 
 export interface CreateEmployeeInput {
     address?: Nullable<string>;
-    departmentId?: Nullable<number>;
+    departmentId: number;
     firstName: string;
     hireDate: string;
-    isActive?: Nullable<boolean>;
+    isActive: boolean;
     lastName: string;
     phone?: Nullable<string>;
 }
@@ -34,18 +34,18 @@ export interface UpdateEmployeeInput {
 export interface Department {
     description?: Nullable<string>;
     employees?: Nullable<Nullable<Employee>[]>;
-    id?: Nullable<number>;
+    id: number;
     name: string;
 }
 
 export interface Employee {
     address?: Nullable<string>;
     department?: Nullable<Department>;
-    departmentId?: Nullable<number>;
+    departmentId: number;
     firstName: string;
     hireDate: string;
-    id?: Nullable<number>;
-    isActive?: Nullable<boolean>;
+    id: number;
+    isActive: boolean;
     lastName: string;
     phone?: Nullable<string>;
 }
