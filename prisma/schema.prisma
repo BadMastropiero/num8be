@@ -14,22 +14,33 @@ datasource db {
 }
 
 model Department {
-  id          Int        @id @default(autoincrement())
+  id          Int                 @id @default(autoincrement())
   name        String
   description String?
   employees   Employee[]
+  histories   DepartmentHistory[]
 }
 
 model Employee {
-  id           Int        @id @default(autoincrement())
-  firstName    String
-  lastName     String
-  hireDate     DateTime
-  department   Department @relation(fields: [departmentId], references: [id])
-  departmentId Int
-  phone        String?
-  address      String?
-  isActive     Boolean    @default(true)
+  id                Int                 @id @default(autoincrement())
+  firstName         String
+  lastName          String
+  hireDate          DateTime
+  department        Department          @relation(fields: [departmentId], references: [id])
+  departmentId      Int
+  phone             String?
+  address           String?
+  isActive          Boolean             @default(true)
+  departmentHistory DepartmentHistory[]
 
   @@index([departmentId])
+}
+
+model DepartmentHistory {
+  id           Int        @id @default(autoincrement())
+  department   Department @relation(fields: [departmentId], references: [id])
+  departmentId Int
+  startDate    DateTime
+  employee     Employee   @relation(fields: [employeeId], references: [id])
+  employeeId   Int
 }

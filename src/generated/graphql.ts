@@ -45,9 +45,19 @@ export interface Department {
     name: string;
 }
 
+export interface DepartmentHistory {
+    department: Department;
+    departmentId: number;
+    employee: Employee;
+    employeeId: number;
+    id: number;
+    startDate: string;
+}
+
 export interface Employee {
     address?: Nullable<string>;
     department?: Nullable<Department>;
+    departmentHistory?: Nullable<Nullable<DepartmentHistory>[]>;
     departmentId: number;
     firstName: string;
     hireDate: string;

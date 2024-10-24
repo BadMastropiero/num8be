@@ -62,3 +62,5 @@ For simplicity, we are using a simple api key for security, but you can change i
 ## TODO (Improvements)
 - Add meaningful tests
 - Stop using db id as graphql id, use uuid or slugs
+- Remove department field in employee because is redundant with departmentHistory
+- Improve some database access with prisma

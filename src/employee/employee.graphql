@@ -1,3 +1,12 @@
+type DepartmentHistory {
+    id:           Int!
+    departmentId: Int!
+    department:   Department!
+    startDate:    String!
+    employee:     Employee!
+    employeeId:   Int!
+}
+
 type Employee {
     id:           Int!
     firstName:    String!
@@ -8,6 +17,7 @@ type Employee {
     address:      String
     department:   Department
     isActive:     Boolean!
+    departmentHistory: [DepartmentHistory]
 }
 
 input CreateEmployeeInput {
